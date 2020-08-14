@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Getting Started: Serving Web Content</title>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<h1>LIST OF PRODUCTS</h1>
+<br />
+<body>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Quantity</th>
+				<th>Action</th>
+
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr th:each="prod : ${pro}">
+				<td th:text="${prod.id}"></td>
+				<td th:text="${prod.name}"></td>
+				<td th:text="${prod.price}"></td>
+				<td th:text="${prod.qnty}"></td>
+				<td><a href="#">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </a><a href="#">
+          <span class="glyphicon glyphicon-remove"></span>
+        </a></td>
+			</tr>
+
+
+
+		</tbody>
+	</table>
+
+
+</body>
+
+</html>
